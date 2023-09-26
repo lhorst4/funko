@@ -11,6 +11,11 @@ public class Pet {
         age = thisAge;
     }
 
+    @Override
+    public String toString() {
+        return name + " (" + breed + "): "  + age;
+    }
+
     public String getName() {
         return name;
     }
