@@ -1,3 +1,7 @@
 <resources>
     <string name="template">template</string>
+    <string name="funkopop_collection">FunkoPOP Collection</string>
+    <string name="make_new_entry">Make New Entry</string>
+    <string name="update_entry">Update Entry</string>
+    <string name="delete">delete</string>
 </resources>
