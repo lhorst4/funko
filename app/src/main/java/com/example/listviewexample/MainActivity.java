@@ -132,11 +132,11 @@ public class MainActivity extends AppCompatActivity {
                     typeTV.setText(type);
                     fandomTV.setText(fandom);
                     ultimateTV.setText(ultimate);
-                    priceTV.setText(String.valueOf(price));
+                    priceTV.setText("$" + price);
                     if (on_off == 0) {
-                        on_offTV.setText("false");
+                        on_offTV.setText("off");
                     }else{
-                        on_offTV.setText("true");
+                        on_offTV.setText("on");
                     }
                 }
             };

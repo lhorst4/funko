@@ -10,56 +10,77 @@
 
         <TextView
             android:id="@+id/numberTV"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/nameTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="5"
             android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/priceTV"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end|right"
+            android:layout_weight="3"
             android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="textEnd"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp" />
 
     </TableRow>
 
     <TableRow>
+
         <TextView
             android:id="@+id/typeTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/fandomTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp" />
     </TableRow>
     <TableRow>
+
         <TextView
             android:id="@+id/ultimateTV"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/on_off_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp" />
     </TableRow>
 </TableLayout>
