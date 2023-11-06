@@ -91,8 +91,11 @@ public class MainActivity extends AppCompatActivity {
             if (mCursor.getCount() == 0) {
                 return;
             }
-            SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, mCursor,
-                    new String[] {FunkoProvider.COL_1}, new int[] {android.R.id.text1}, 0);
+            SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
+                    android.R.layout.simple_list_item_1,
+                    mCursor,
+                    new String[] { FunkoProvider.COL_1 },
+                    new int[] { android.R.id.text1 });
             funkoLV.setAdapter(adapter);
         }
     }
@@ -107,18 +110,18 @@ public class MainActivity extends AppCompatActivity {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         int position = info.position;
         if(item.getItemId() == R.id.delete){
-            Toast.makeText(this, "Deleting Item", Toast.LENGTH_LONG);
+            Toast.makeText(this, "Deleting Item", Toast.LENGTH_LONG).show();
             Funko f = funkoList.get(position);
             funkoList.remove(position);
             String mSelectedClause = FunkoProvider.COL_1 + " = ? " + " AND " +
                     FunkoProvider.COL_2 + " = ? " + " AND " +
                     FunkoProvider.COL_3 + " = ? " + " AND " +
                     FunkoProvider.COL_4 + " = ? " + " AND " +
-                    FunkoProvider.COL_5 + " = ? " + " AND " +
-                    FunkoProvider.COL_6 + " = ? " + " AND " +
-                    FunkoProvider.COL_7 + " = ? ";
+                    //FunkoProvider.COL_5 + " = ? " + " AND " +
+                    FunkoProvider.COL_6 + " = ? ";// + " AND " +
+                    //FunkoProvider.COL_7 + " = ? ";
             String[] mSelectionArgs = {f.getName(), String.valueOf(f.getNumber()), f.getType(), f.getFandom(),
-                    String.valueOf(f.isOn_off()), f.getUltimate(), String.valueOf(f.getPrice())};
+                    /*String.valueOf(f.isOn_off()),*/ f.getUltimate()};//, String.valueOf(f.getPrice())};
 
             int mRowsDeleted = getContentResolver().delete(FunkoProvider.contentURI, mSelectedClause, mSelectionArgs);
         }

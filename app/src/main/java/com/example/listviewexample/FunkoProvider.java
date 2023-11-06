@@ -25,7 +25,7 @@ public class FunkoProvider extends ContentProvider {
     private MainDatabaseHelper SQLHelper;
 
     private static String CREATE_DB_QUERY = "CREATE TABLE " + TABLE_NAME +
-            "( _ID INTEGER PRIMARY KEY," +
+            "( _id INTEGER PRIMARY KEY," +
             COL_1 + " TEXT," +
             COL_2 + " INTEGER," +
             COL_3 + " TEXT," +
