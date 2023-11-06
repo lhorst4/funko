@@ -31,4 +31,9 @@
     <string name="price">Price</string>
     <string name="off">Off</string>
     <string name="add_entry">Add Entry</string>
+    <string name="title_activity_update_funko">Leanback UpdateFunko</string>
+    <string name="update_funko">Update Funko</string>
+    <string name="number_to_update">Number to update</string>
+    <string name="update_entry_">Update Entry</string>
+    <string name="view_collection">View Collection</string>
 </resources>
