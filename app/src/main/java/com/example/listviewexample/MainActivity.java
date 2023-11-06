@@ -2,6 +2,7 @@ package com.example.listviewexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener newEntry = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            Intent intent = new Intent(getApplicationContext(), NewFunko.class);
+            startActivity(intent);
         }
     };
     View.OnClickListener updateEntry = new View.OnClickListener() {
