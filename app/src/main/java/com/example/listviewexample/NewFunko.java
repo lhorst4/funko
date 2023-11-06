@@ -90,6 +90,21 @@ public class NewFunko extends FragmentActivity {
                 return;
             }
             // check for duplicates
+            mCursor = getContentResolver().query(FunkoProvider.contentURI, null, null, null, null);
+            if(mCursor != null){
+                mCursor.moveToFirst();
+                if(mCursor.getCount() > 0){
+                    while(mCursor.isAfterLast() == false){
+                        int number = mCursor.getInt(2);
+                        if(number == num){
+                            Toast.makeText(getApplicationContext(), "Failed to add entry: number already in use.", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        mCursor.moveToNext();
+                    }
+                }
+            }
+
             ContentValues mNewValues = new ContentValues();
             mNewValues.put(FunkoProvider.COL_1, name);
             mNewValues.put(FunkoProvider.COL_2, num);

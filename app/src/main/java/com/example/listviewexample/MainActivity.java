@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
         mCursor = getContentResolver().query(FunkoProvider.contentURI, null, null, null, null);
         if (mCursor != null) {
             if (mCursor.getCount() == 0) {
+                ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, new String[] {});
+                funkoLV.setAdapter(adapter);
                 return;
             }
             /*SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
